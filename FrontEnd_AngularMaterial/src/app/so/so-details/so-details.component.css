@@ -1,0 +1,267 @@
+.table-container {
+  max-height: 500px;
+  overflow: auto;
+  border: 1px solid rgba(0, 0, 0, 0.55);
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.search-bar-responsive{
+  display: none;
+}
+.daterange{
+  display: flex;
+  width: 235px;
+}
+.centered-buttons {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.resetFiltersAndClose{
+  justify-content: center;
+  display: flex;
+  gap:30px
+}
+
+.search-bar{
+  width:10px;
+  padding-top: 8px;
+  padding-left: 25px;
+  padding-bottom: 0px;
+}
+
+.td-row{
+  border:1px solid rgba(28, 1, 1, 0.409) ;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-top: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  caret-color: transparent;
+}
+
+.table-container table tr:hover {
+  background-color:#006e740a;
+  height: max-content;
+}
+
+.actionbuttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-cell {
+  background-color: #006E74 !important;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.477);
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.655);
+  top: 0;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 300;
+  caret-color: transparent;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  padding: 1px;
+}
+.full-width{
+  width: 119px;
+  display: flex;
+}
+.full-width-inex{
+  width: 95px;
+  display: flex;
+}
+.full-width1{
+  width: 180px;
+  display: flex;
+}
+.full-width-status{
+  width: 110px;
+  display: flex;
+}
+.full-width-poc{
+  width: 140px;
+  display: flex;
+}
+.full-width2{
+  width: 160px;
+  display: flex;
+}
+.band{
+  width: 100px;
+  display: flex;
+}
+.tech{
+  width: 150px;
+  display: flex;
+
+}
+
+.filter-card {
+  display: flex;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.927);
+  background-color: #006e7400;
+  padding-bottom: 2px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+
+.filter-card mat-card-content {
+  padding-bottom: 0px;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.filter-button:focus {
+  outline: none;
+}
+
+
+.filter-text {
+  font-weight: bold;
+}
+.row-container {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+
+}
+
+
+.filter-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.card {
+  width: 250px;
+  padding: 20px;
+  margin: 0 auto;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+#toggle {
+  background-color: #006e74ea;
+  transition: background-color 0.3s ease;
+}
+
+#filcol {
+  text-align: center;
+  color: white;
+  transition: color 0.3s ease;
+  font-weight: 300;
+}
+
+
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+.mat-label {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.popupbutton {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+::ng-deep .mat-sort-header-arrow{
+  color: white;
+}
+.filter-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  flex-wrap: wrap;
+  padding: 5px;
+}
+@media screen and (max-width: 600px){
+  .td-row{
+    font-size: 10px;
+  }
+  .header-cell{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1087px) {
+  .filter-form {
+    grid-template-columns: 1fr;
+  }
+  .row-container{
+    margin-top:0px;
+    padding-bottom: 5px;
+  }
+  .filter-card{
+    border-radius: 0px;
+    overflow-x:auto;
+    overflow-y: hidden;
+  }
+
+  .search-bar{
+    display: none;
+  }
+
+  .search-bar-responsive{
+    display: flex;
+    padding-top: 70px;
+    padding-bottom: 1px;
+  }
+
+  .centered-buttons button {
+
+    max-width: auto;
+    font-size:10px;
+    padding-top:0px
+  }
+
+  .filter-pagination{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 0px;
+  }
+}
+
+.row-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
+}
+
+.centered-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  max-width: auto;
+  margin: 0 auto;
+  padding-top: 0px;
+}
+
+

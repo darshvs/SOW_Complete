@@ -1,0 +1,98 @@
+
+<mat-toolbar class="toolbar-main">
+  <button mat-icon-button (click)="drawer.toggle()" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span id="ust">UST</span>
+  <span id="sotracker">SOW Tracker</span>
+  <div class="nav-item">
+    <button mat-button id="item1" routerLink="/dashboard">
+      <div class="icon-container">
+        <mat-icon  class="small-icon" >computer</mat-icon>
+      </div>
+      <span>Dashboard</span>
+    </button>
+    <button mat-button id="item2" routerLink="/sow">
+      <div class="icon-container">
+        <mat-icon class="small-icon">explore</mat-icon>
+      </div>
+      <span>SO</span>
+    </button>
+
+    <button mat-button id="item4" routerLink="/candidatedetails">
+      <div class="icon-container">
+        <mat-icon   class="small-icon">person</mat-icon>
+      </div>
+      <span >Candidate</span>
+    </button>
+    <button mat-button id="item3" routerLink="/mapping">
+      <div class="icon-container">
+        <mat-icon class="small-icon">group_work</mat-icon>
+      </div>
+      <span>Mapping</span>
+    </button>
+    <button mat-button id="item3"  routerLink="/admin">
+      <div class="icon-container">
+        <mat-icon class="small-icon">admin_panel_settings</mat-icon>
+      </div>
+      <span>Admin</span>
+    </button>
+
+    <div  [matMenuTriggerFor]="profileMenu"   id="item8">
+      <div class="icon-container">
+        <span>Profile</span><mat-icon class="small-icon1">account_circle</mat-icon>
+      </div>
+
+    </div>
+
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item   routerLink="/changepassword">
+        Change Password
+      </button>
+      <button mat-menu-item  routerLink="/security">
+        Security
+      </button>
+      <button mat-menu-item routerLink="/login">
+        Logout
+      </button>
+    </mat-menu>
+  </div>
+
+</mat-toolbar>
+
+<mat-drawer-container  class="example-container">
+  <mat-drawer #drawer mode="side">
+    <div class="vertical-icons">
+      <div class="icon-with-text" routerLink="/dashboard">
+        <mat-icon class="small-icon-side">computer</mat-icon>
+        <span>Dashboard</span>
+      </div>
+      <div class="icon-with-text"  routerLink="/sow">
+        <mat-icon class="small-icon-side">explore</mat-icon>
+        <span>SO</span>
+      </div>
+      <div class="icon-with-text" routerLink="/candidatedetails" >
+        <mat-icon   class="small-icon-side">person</mat-icon>
+        <span >Candidate</span>
+      </div>
+      <div class="icon-with-text" routerLink="/mapping">
+        <mat-icon class="small-icon-side">group_work</mat-icon>
+        <span>Mapping</span>
+      </div>
+
+      <div class="icon-with-text" routerLink="/admin">
+        <mat-icon class="small-icon-side">admin_panel_settings</mat-icon>
+        <span>Admin</span>
+      </div>
+
+      <div class="icon-with-text" routerLink="/login">
+        <mat-icon class="small-icon-side">exit_to_app</mat-icon>
+        <span>Log Out</span>
+      </div>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
